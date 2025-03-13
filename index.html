@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="A_sleek_and_modern_tech_company_logo_with_a_futuri.png" style="border-radius: 50%;">
+    <title>Digital Products Store</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      header {
+        background: rgba(30, 30, 30, 0.9);
+        color: white;
+        padding: 20px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeInDown 1s ease-in-out;
+      }
+      header a i {
+        color: #fff;
+      }
+      header span {
+        flex-grow: 1;
+        text-align: center;
+        text-shadow: 4px 4px 15px rgba(255, 223, 100, 1),
+          /* Stronger golden shadow with larger blur */ -4px -4px 15px
+            rgba(255, 223, 100, 1); /* Stronger golden shadow */
+      }
+      .logo {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid white;
+        transition: transform 0.3s ease-in-out;
+      }
+      .logo:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+      .header-title {
+        flex-grow: 1;
+        text-align: center;
+      }
+      .cart {
+        font-size: 24px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+      .cart:hover {
+        transform: scale(1.2);
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 40px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-in-out forwards;
+      }
+      .product {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        width: 320px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      .product:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      }
+      .product img {
+        width: 100%;
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .product:hover img {
+        transform: scale(1.1);
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin-top: 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        background: linear-gradient(135deg, #ffba08, #faa307);
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+      }
+      .btn:hover {
+        background: linear-gradient(135deg, #faa307, #d97706);
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="A_sleek_and_modern_tech_company_logo_with_a_futuri.png"
+        alt="Company Logo"
+        class="logo"
+      />
+      <span>Digital Products Store</span>
+      <a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+    </header>
+    <div class="container">
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.14 - A futuristic AI-generated digital artwork featuring vibrant colors, abstract patterns, and a sleek, modern aesthetic. The image should be visually app.webp"
+          alt="AI Art"
+        />
+        <h2>AI-Generated Art</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.17 - A professional resume template with a clean and modern design, featuring well-structured sections for personal information, experience, skills, and ed.webp"
+          alt="Resume Template"
+        />
+        <h2>Resume Template</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.21 - A digital business card design featuring a sleek and modern layout with elegant typography, a professional color scheme, and a subtle abstract backgro.webp"
+          alt="Business Card"
+        />
+        <h2>Business Card Design</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.23 - A minimalist eBook cover design with a modern aesthetic, featuring clean typography, a simple color palette, and an abstract background pattern.webp"
+          alt="eBook Cover"
+        />
+        <h2>eBook Cover</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.25 - A stylish Instagram post template featuring bold typography, modern graphic elements, and a trendy color scheme, perfect for social media marketing.webp"
+          alt="Instagram Template"
+        />
+        <h2>Instagram Template</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img
+          src="images/DALL·E 2025-03-13 16.04.27 - A creative flyer template design for a modern business event, featuring sleek typography, geometric shapes, and a professional layout.webp"
+          alt="Business Flyer"
+        />
+        <h2>Business Flyer</h2>
+        <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+        <a href="#" class="btn">Buy Now</a>
+        <script>
+          function addToCart(button) {
+            const product = button.parentElement;
+            const name = product.querySelector("h2").textContent; // Get product name
+            const image = product.querySelector("img").src; // Get product image URL
+
+            // Get cart items from localStorage or initialize it as an empty array
+            const cartItems =
+              JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Add product data (name and image) to the cart
+            cartItems.push({ name, image });
+
+            // Save the updated cart to localStorage
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+            // Optional: Display a confirmation message
+            alert(`${name} has been added to your cart!`);
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
